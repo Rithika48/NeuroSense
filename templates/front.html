@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NeuroSense</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='img/neurosensefinal.png') }}">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#" onclick="toggleDropdown(event)">Services</a>
+            <ul class="dropdown-content" id="servicesDropdown">
+              <li><a href="templates/index.html">Handwriting Analysis</a></li>
+            </ul>
+          </li>
+                    <li><a href="#">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="slider">
+      <div class="slider-content">
+        <div class="text">
+          <h1>WORKING WITH PARENTS AND TEACHERS</h1>
+        </div>
+        <div class="image">
+          <img src="{{ url_for('static', filename='img/kidsplaying.jpg') }}">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services">
+    <h2>Our Features</h2>
+    <p class="subheading">
+        <p style="margin-bottom: 20px;">Upload and analyze handwriting samples. “Every child is unique — our technology helps you see how.”</p>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="{{ url_for('static', filename='img/handwriting.jpeg') }}">
+        <a href="static/index.html">
+          <h3>Handwriting Analysis</h3>
+        </a>
+        
+      </div>
+      
+      
+    </div>
+  </section>
+  <script>
+  function toggleDropdown(event) {
+    event.preventDefault();
+    const dropdown = document.getElementById("servicesDropdown");
+    dropdown.classList.toggle("show");
+  }
+
+  // Close dropdown if clicked outside
+  window.addEventListener("click", function(e) {
+    const dropdown = document.getElementById("servicesDropdown");
+    if (!e.target.closest(".dropdown")) {
+      dropdown.classList.remove("show");
+    }
+  });
+</script>
+
+</body>
+</html>

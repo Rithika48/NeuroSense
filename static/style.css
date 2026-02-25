@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background: #fff;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #f8f8f8;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+  }
+  
+  .hero {
+    background-color: #f0f0ff;
+    padding: 50px 0;
+  }
+  
+  .slider-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 50px;
+  }
+  
+  .slider-content .text {
+    flex: 1;
+  }
+  
+  .slider-content .text h1 {
+    font-size: 2.5rem;
+    color: #1f229d;
+  }
+  
+  .slider-content .image {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .slider-content .image img {
+    max-width: 90%;
+    height: auto;
+  }
+  .services {
+    padding: 60px 50px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .services .subheading {
+    color: #555;
+    font-size: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+  }
+  
+  .service-card {
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    background-color: #fafafa;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-card img {
+    max-width: 200px;
+    max-height: 100px;
+    margin-bottom: 15px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  /* Dropdown styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  z-index: 999;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 200px;
+}
+
+.dropdown-content li {
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-content li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f2f2f2;
+}
+
+.show {
+  display: block;
+}

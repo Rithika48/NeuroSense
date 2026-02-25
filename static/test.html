@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dyslexia Detector Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        #result { margin-top: 20px; padding: 10px; border: 1px solid #ddd; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>Test Backend Connection</h1>
+    
+    <div>
+        <h3>1. First check server status:</h3>
+        <button onclick="checkServer()">Check Server</button>
+        <div id="serverStatus"></div>
+    </div>
+    
+    <div>
+        <h3>2. Test with sample image:</h3>
+        <input type="file" id="imageInput" accept="image/*">
+        <button onclick="predict()">Predict</button>
+        <div id="predictionResult"></div>
+    </div>
+
+    <script>
+        async function checkServer() {
+            const statusDiv = document.getElementById('serverStatus');
+            statusDiv.innerHTML = "Checking server...";
+            
+            try {
+                const response = await fetch('/');
+                const data = await response.json();
+                statusDiv.innerHTML = `
+                    <div class="success">
+                        Server is running!<br>
+                        Model loaded: ${data.model_loaded ? '✅' : '❌'}<br>
+                        Expected input: ${data.expected_input_shape.join('x')} pixels
+                    </div>
+                `;
+            } catch (error) {
+                statusDiv.innerHTML = `<div class="error">Server connection failed: ${error}</div>`;
+            }
+        }
+
+        async function predict() {
+            const fileInput = document.getElementById('imageInput');
+            const resultDiv = document.getElementById('predictionResult');
+            
+            if (!fileInput.files.length) {
+                resultDiv.innerHTML = '<div class="error">Please select an image first</div>';
+                return;
+            }
+            
+            resultDiv.innerHTML = "Processing...";
+            
+            try {
+                const formData = new FormData();
+                formData.append('image', fileInput.files[0]);
+                
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    resultDiv.innerHTML = `
+                        <div class="success">
+                            Prediction: ${data.prediction}<br>
+                            Confidence: ${(data.confidence * 100).toFixed(2)}%
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `<div class="error">Error: ${data.error}</div>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="error">Request failed: ${error}</div>`;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dyslexia Detection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fefefe;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff9900;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      background-color: #fff2cc;
+      padding: 60px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-size: 32px;
+      color: #1a237e;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      padding: 60px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .content h2 {
+      color: #1a237e;
+      font-size: 28px;
+    }
+
+    .content ul {
+      margin-top: 20px;
+    }
+
+    .content li {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .upload-section {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .upload-section input[type="file"] {
+      margin: 20px 0;
+      font-size: 16px;
+    }
+
+    .upload-section button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #1a237e;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .upload-section button:hover {
+      background-color: #3949ab;
+    }
+
+    .prediction-result {
+      font-size: 22px;
+      margin-top: 20px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .preview-image {
+      margin-top: 20px;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">NeuroSense</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Helping Children with Dyslexia through AI-powered Early Detection</h1>
+      <p>
+        We have developed a deep learning model to detect signs of dyslexia 
+        based on image input. Early diagnosis helps provide better support 
+        and intervention.
+      </p>
+    </div>
+  </section>
+
+  <!-- Description Section -->
+  <section class="content">
+    <h2>How It Works</h2>
+    <ul>
+      <li>✔️ User uploads an image (e.g., handwriting)</li>
+      <li>✔️ Our AI model analyzes the input</li>
+      <li>✔️ Returns prediction: Dyslexia or Non-Dyslexia</li>
+      <li>✔️ Enables early intervention and support</li>
+    </ul>
+  </section>
+
+  <!-- Upload Section -->
+  <section class="upload-section">
+    <h2>Upload Image for Prediction</h2>
+
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <div class="prediction-result">
+            {{ prediction }}
+        </div>
+        <img src="{{ url_for('static', filename=image_file) }}" 
+             class="preview-image">
+    {% endif %}
+  </section>
+
+</body>
+</html>
