@@ -9,7 +9,3 @@ Show Image
 Show Image
 Show Image
 <br/>
-
-🏆 Built during AETHERION'25 — 24-Hour Hackathon at Canara Engineering College
-
-<br/>
