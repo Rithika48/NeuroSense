@@ -1,287 +1,198 @@
-# <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=35&pause=1000&color=6C63FF&width=600&lines=🧠+NeuroSense;Early+Dyslexia+Detection+AI" alt="NeuroSense" />
-
 <div align="center">
 
-![NeuroSense Banner](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=NeuroSense&fontSize=80&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Early%20Dyslexia%20Detection%20from%20Handwriting%20using%20CNN&descAlignY=55&descSize=18)
+<img src="learnn.jpg" alt="NeuroSense Banner" width="100%"/>
+
+<br/>
+
+# 🧠 NeuroSense
+
+### *See the Signs. Support the Mind.*
+
+> A deep learning–powered web application that detects early signs of **Dyslexia** by analyzing handwriting samples in real-time using Convolutional Neural Networks.
 
 <br/>
 
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://tensorflow.org)
-[![Flask](https://img.shields.io/badge/Flask-Web%20App-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
-[![CNN](https://img.shields.io/badge/Model-CNN-E34F26?style=for-the-badge&logo=keras&logoColor=white)](https://keras.io)
+[![Flask](https://img.shields.io/badge/Flask-Web%20Framework-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-CNN%20Model-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://tensorflow.org)
+[![HTML5](https://img.shields.io/badge/HTML5-Frontend-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-Styled-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)]()
 
 <br/>
 
-> 🏆 **Built during AETHERION'25** — 24-Hour Hackathon at Canara Engineering College
-
-<br/>
-
-**NeuroSense** is an AI-powered web application that detects early signs of **Dyslexia** from handwriting samples in real-time using a Convolutional Neural Network (CNN) — making early screening faster, accessible, and affordable for everyone.
-
-<br/>
-
-[🚀 View Demo](#-demo) • [⚙️ Installation](#-how-to-run-locally) • [🧠 Model](#-model-architecture) • [🤝 Contribute](#-contributing)
+[🚀 Getting Started](#-getting-started) · [🧪 How It Works](#-how-it-works) · [📁 Project Structure](#-project-structure) · [🤝 Contributing](#-contributing)
 
 </div>
 
 ---
 
-## 🌟 Why NeuroSense?
+## 🌟 What is NeuroSense?
 
-<div align="center">
+**NeuroSense** is an AI-powered assistive tool that helps identify early indicators of **Dyslexia** — a learning difference affecting how the brain processes written language — through the analysis of handwriting samples.
 
-| 🌍 Problem | 💡 Solution |
-|---|---|
-| 1 in 10 people worldwide have Dyslexia | AI-powered early detection |
-| Clinical diagnosis is expensive | Free, accessible web tool |
-| Lack of awareness in schools | Real-time handwriting analysis |
-| Delayed detection affects learning | Instant prediction with confidence score |
+By leveraging a custom **Convolutional Neural Network (CNN)**, NeuroSense processes uploaded handwriting images and provides a real-time prediction, enabling educators, parents, and clinicians to take timely, informed action.
 
-</div>
+> 💡 **Did you know?** Dyslexia affects approximately **15–20% of the population**, yet early detection significantly improves outcomes. NeuroSense bridges the gap between cutting-edge AI and accessible screening tools.
 
 ---
 
 ## ✨ Features
 
-```
-🔍  Upload any handwriting image for instant analysis
-🤖  CNN model trained on real dyslexia handwriting dataset  
-⚡  Real-time prediction with confidence score
-🎯  Binary classification — Dyslexic / Non-Dyslexic
-✅  Smart file validation — PNG/JPG/JPEG only
-🌐  Clean, responsive web interface
-📊  Confidence percentage displayed with every result
-```
+| Feature | Description |
+|---|---|
+| 🖼️ **Handwriting Upload** | Upload any handwriting image for instant analysis |
+| 🤖 **CNN-Based Detection** | Deep learning model trained on real dyslexia datasets |
+| ⚡ **Real-Time Results** | Instant prediction with confidence output |
+| 🌐 **Web Interface** | Clean, accessible browser-based UI — no installation needed for users |
+| 📊 **Jupyter Notebook** | Fully documented model training workflow |
+| 🗂️ **Organized Datasets** | Structured dataset folders for reproducible training |
 
 ---
 
-## 🛠️ Tech Stack
+## 🧪 How It Works
 
-<div align="center">
+```
+📸 Upload Handwriting Image
+        ↓
+🔍 Image Preprocessing (resize, normalize)
+        ↓
+🧠 CNN Model Inference
+        ↓
+📊 Prediction: Dyslexic / Non-Dyslexic
+        ↓
+🌐 Result Displayed on Web Interface
+```
 
-| Layer | Technology |
-|---|---|
-| 🧠 **ML Model** | Convolutional Neural Network (CNN) |
-| 🔥 **Deep Learning** | TensorFlow / Keras |
-| 🐍 **Backend** | Python, Flask |
-| 🎨 **Frontend** | HTML5, CSS3, JavaScript |
-| 📊 **Data Processing** | NumPy, Pandas, OpenCV |
-| 🔧 **Development** | Jupyter Notebook, VS Code |
-| 📦 **Dependencies** | requirements.txt |
-
-</div>
+The model is trained on labeled handwriting samples, learning to identify spatial patterns, letter reversals, inconsistent spacing, and other visual signatures commonly associated with dyslexia.
 
 ---
 
 ## 📁 Project Structure
 
 ```
-🧠 NeuroSense/
+NeuroSense/
 │
-├── 📄 app.py                   # Flask web application & routes
-├── 🤖 train_model.py           # CNN model training script
-├── 📓 NeuroSense.ipynb         # Model exploration notebook
+├── 📂 dataset/               # Raw dataset for training
+├── 📂 dyslexia_dataset/      # Processed dyslexia-specific samples
+├── 📂 static/                # CSS, JS, images for the web app
+├── 📂 templates/             # HTML templates (Jinja2 / Flask)
 │
-├── 📂 dataset/                 # Training dataset
-├── 📂 dyslexia_dataset/        # Dyslexia specific samples
-├── 📂 sample_images/           # Sample test images
-│
-├── 📂 static/                  # CSS, JS, images
-│   ├── style.css
-│   └── script.js
-│
-├── 📂 templates/               # HTML templates
-│   ├── index.html              # Upload page
-│   └── result.html             # Prediction result page
-│
-├── 📄 requirements.txt         # Python dependencies
-├── 📄 .gitignore
-└── 📄 README.md
+├── 🐍 app.py                 # Flask web application entry point
+├── 🐍 train_model.py         # CNN model training script
+├── 📓 NeuroSense.ipynb       # Jupyter notebook — EDA & model training
+├── 📋 requirements.txt       # Python dependencies
+├── 🖼️ learnn.jpg             # Project visual / banner
+└── 📄 README.md              # You're reading it!
 ```
 
 ---
 
-## ⚙️ How to Run Locally
+## 🚀 Getting Started
 
 ### Prerequisites
-- Python 3.8+
+
+- Python 3.8 or higher
 - pip package manager
-- Webcam (optional)
+- Git
 
-### Steps
+### Installation
 
+**1. Clone the repository**
 ```bash
-# 1️⃣ Clone the repository
 git clone https://github.com/Rithika48/NeuroSense.git
-
-# 2️⃣ Navigate to project folder
 cd NeuroSense
+```
 
-# 3️⃣ Create virtual environment
+**2. Create a virtual environment** *(recommended)*
+```bash
 python -m venv venv
+source venv/bin/activate        # macOS/Linux
+venv\Scripts\activate           # Windows
+```
 
-# 4️⃣ Activate virtual environment
-# Windows:
-venv\Scripts\activate
-# Linux/Mac:
-source venv/bin/activate
-
-# 5️⃣ Install dependencies
+**3. Install dependencies**
+```bash
 pip install -r requirements.txt
+```
 
-# 6️⃣ Run the application
+**4. Train the model** *(skip if pre-trained model is included)*
+```bash
+python train_model.py
+```
+
+**5. Launch the web app**
+```bash
 python app.py
+```
 
-# 7️⃣ Open in browser
-# Visit: http://localhost:5000
+**6. Open your browser and go to:**
+```
+http://127.0.0.1:5000
 ```
 
 ---
 
 ## 🧠 Model Architecture
 
-```
-📸 Input Image (Handwriting Sample)
-           │
-           ▼
-    ┌─────────────────┐
-    │  Conv2D Layer   │  ← Feature extraction
-    │  + ReLU         │
-    └────────┬────────┘
-             │
-    ┌────────▼────────┐
-    │  MaxPooling     │  ← Dimensionality reduction
-    └────────┬────────┘
-             │
-    ┌────────▼────────┐
-    │  Conv2D Layer   │  ← Deep feature learning
-    │  + ReLU         │
-    └────────┬────────┘
-             │
-    ┌────────▼────────┐
-    │  MaxPooling     │
-    └────────┬────────┘
-             │
-    ┌────────▼────────┐
-    │  Flatten Layer  │
-    └────────┬────────┘
-             │
-    ┌────────▼────────┐
-    │  Dense Layer    │  ← Classification
-    └────────┬────────┘
-             │
-             ▼
-    🎯 Output: Dyslexic / Non-Dyslexic
-    📊 + Confidence Score %
-```
+The CNN model is built to classify handwriting samples into:
+
+- ✅ **Non-Dyslexic** — Handwriting patterns within typical range
+- ⚠️ **Dyslexic Indicators** — Patterns suggesting early signs of dyslexia
+
+The model uses standard CNN layers (Conv2D → MaxPooling → Dropout → Dense) optimized for grayscale handwriting image classification. Full architecture details are available in [`NeuroSense.ipynb`](NeuroSense.ipynb).
 
 ---
 
-## 🔄 How It Works
+## 🛠️ Tech Stack
 
-```
-Step 1 → User uploads handwriting image 📸
-Step 2 → Image preprocessed (resize + normalize) ⚙️
-Step 3 → CNN model analyzes handwriting patterns 🧠
-Step 4 → Prediction generated with confidence % 📊
-Step 5 → Result displayed on web interface ✅
-```
-
----
-
-## 🧪 Test the App
-
-Sample handwriting images are available in the `/sample_images/` folder!
-
-You can use these to **test the application** without needing your own dataset.
+| Layer | Technology |
+|---|---|
+| **Backend** | Python, Flask |
+| **Deep Learning** | TensorFlow / Keras |
+| **Frontend** | HTML5, CSS3 |
+| **Model Development** | Jupyter Notebook |
+| **Data Handling** | NumPy, OpenCV / Pillow |
 
 ---
 
-## 🚀 Future Improvements
+## 📸 Screenshots
 
-- [ ] 🔍 Add **Grad-CAM visualization** to highlight dyslexic patterns
-- [ ] 📱 Make UI **fully mobile responsive**
-- [ ] 🔗 Build **REST API** for third-party integration
-- [ ] 🌍 Add **multi-language** handwriting support
-- [ ] 🏫 Integrate with **school management systems**
-- [ ] 📈 Improve model accuracy with **larger dataset**
-- [ ] ☁️ Deploy on **cloud platform** (AWS/Heroku)
+> *Upload your handwriting image → Get an instant AI-powered assessment*
 
----
-
-## 🏆 Hackathon Achievement
-
-<div align="center">
-
-```
-🎯 Event    : AETHERION'25
-⏰ Duration : 24 Hours
-🏫 Venue    : Canara Engineering College
-📅 Date     : March 27-29, 2025
-🚀 Built    : End-to-end CNN Web Application
-```
-
-> Built complete AI-powered web application from scratch in **24 hours** — from problem ideation to working deployed solution!
-
-</div>
-
----
-
-## 📦 Requirements
-
-```txt
-flask
-tensorflow
-keras
-numpy
-pillow
-scikit-learn
-matplotlib
-opencv-python
-```
-
-```bash
-pip install -r requirements.txt
-```
+| Home Page | Upload & Predict | Result View |
+|---|---|---|
+| *(Screenshot)* | *(Screenshot)* | *(Screenshot)* |
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are always welcome! 🎉
+Contributions are welcome! Here's how you can help improve NeuroSense:
 
-```bash
-# 1. Fork the repository
-# 2. Create your feature branch
-git checkout -b feature/AmazingFeature
-
-# 3. Commit your changes
-git commit -m "Add AmazingFeature"
-
-# 4. Push to branch
-git push origin feature/AmazingFeature
-
-# 5. Open a Pull Request
-```
+1. **Fork** the repository
+2. **Create** a feature branch: `git checkout -b feature/amazing-feature`
+3. **Commit** your changes: `git commit -m 'Add amazing feature'`
+4. **Push** to the branch: `git push origin feature/amazing-feature`
+5. **Open** a Pull Request
 
 ---
 
-## 👩‍💻 About the Developer
+## ⚠️ Disclaimer
+
+> NeuroSense is an **educational and screening aid** — it is **not a medical diagnostic tool**. Results should not replace professional evaluation by a licensed educational psychologist, neurologist, or learning specialist. Always consult a qualified professional for a formal assessment.
+
+---
+
+## 👩‍💻 Author
 
 <div align="center">
 
-**Rithika Saroli**
-*Final Year CS Student | AI/ML & Full Stack Developer*
-*Mangaluru, Karnataka, India*
+**Rithika**
 
-<br/>
+[![GitHub](https://img.shields.io/badge/GitHub-Rithika48-181717?style=for-the-badge&logo=github)](https://github.com/Rithika48)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rithika-saroli)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Rithika48)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rithikasaroli@gmail.com)
+*"Building technology that understands how people learn differently."*
 
 </div>
 
@@ -295,11 +206,8 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 <div align="center">
 
-![Footer](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer)
+Made with ❤️ and a belief that **every mind deserves to be understood**
 
-### ⭐ If you found NeuroSense helpful, please give it a star!
-### It helps others discover this project and motivates further development! 🚀
-
-**Made with ❤️ by Rithika Saroli**
+⭐ Star this repo if NeuroSense inspired you!
 
 </div>
