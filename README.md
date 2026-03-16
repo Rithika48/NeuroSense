@@ -1,213 +1,264 @@
-<div align="center">
+# NeuroSense – AI-Based Dyslexia Detection from Handwriting
 
-<img src="learnn.jpg" alt="NeuroSense Banner" width="100%"/>
+An AI-powered handwriting analysis system that detects early signs of Dyslexia using deep learning techniques. The platform analyzes handwriting images and predicts whether the writing pattern indicates Dyslexia or Non-Dyslexia.
 
-<br/>
-
-# 🧠 NeuroSense
-
-### *See the Signs. Support the Mind.*
-
-> A deep learning–powered web application that detects early signs of **Dyslexia** by analyzing handwriting samples in real-time using Convolutional Neural Networks.
-
-<br/>
-
-[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Flask](https://img.shields.io/badge/Flask-Web%20Framework-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-CNN%20Model-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://tensorflow.org)
-[![HTML5](https://img.shields.io/badge/HTML5-Frontend-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-Styled-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-
-<br/>
-
-[🚀 Getting Started](#-getting-started) · [🧪 How It Works](#-how-it-works) · [📁 Project Structure](#-project-structure) · [🤝 Contributing](#-contributing)
-
-</div>
+The system uses **Computer Vision, Convolutional Neural Networks (CNN), and a Flask web application** to provide quick screening support for learning disabilities based on handwriting patterns.
 
 ---
 
-## 🌟 What is NeuroSense?
+# Project Description
 
-**NeuroSense** is an AI-powered assistive tool that helps identify early indicators of **Dyslexia** — a learning difference affecting how the brain processes written language — through the analysis of handwriting samples.
+This project is a web-based deep learning platform that detects potential Dyslexia in handwriting samples.
 
-By leveraging a custom **Convolutional Neural Network (CNN)**, NeuroSense processes uploaded handwriting images and provides a real-time prediction, enabling educators, parents, and clinicians to take timely, informed action.
+The application allows users to upload a handwriting image, which is then analyzed using a trained **Convolutional Neural Network (CNN)** model to identify writing patterns commonly associated with Dyslexia.
 
-> 💡 **Did you know?** Dyslexia affects approximately **15–20% of the population**, yet early detection significantly improves outcomes. NeuroSense bridges the gap between cutting-edge AI and accessible screening tools.
+The system performs image preprocessing, feeds the processed image into the trained model, and returns a prediction indicating whether the handwriting sample shows characteristics of Dyslexia.
 
----
-
-## ✨ Features
-
-| Feature | Description |
-|---|---|
-| 🖼️ **Handwriting Upload** | Upload any handwriting image for instant analysis |
-| 🤖 **CNN-Based Detection** | Deep learning model trained on real dyslexia datasets |
-| ⚡ **Real-Time Results** | Instant prediction with confidence output |
-| 🌐 **Web Interface** | Clean, accessible browser-based UI — no installation needed for users |
-| 📊 **Jupyter Notebook** | Fully documented model training workflow |
-| 🗂️ **Organized Datasets** | Structured dataset folders for reproducible training |
+The platform aims to support early screening and assist educators, parents, and researchers in identifying learning difficulties at an early stage.
 
 ---
 
-## 🧪 How It Works
+# Problem Statement
+
+Learning disabilities such as Dyslexia often remain undiagnosed during early childhood due to limited access to specialized assessment tools.
+
+Traditional diagnosis methods typically require:
+
+- Professional psychological evaluation
+- Time-consuming handwriting analysis
+- Specialized educational assessments
+
+Many schools and families lack access to early diagnostic tools that can help identify learning challenges quickly.
+
+This project aims to address this problem by developing a **machine learning-based handwriting analysis system** that can provide early indications of Dyslexia using AI-based image analysis.
+
+---
+
+# Tech Stack
+
+## Programming Languages
+- Python
+- HTML
+- CSS
+- JavaScript
+
+## Backend
+- Flask
+
+## Deep Learning
+- TensorFlow
+- Keras
+
+## Data Processing
+- NumPy
+
+## Image Processing
+- TensorFlow Image Processing
+- ImageDataGenerator
+
+## Visualization / Interface
+- HTML Templates
+- Static CSS
+
+## Data Storage
+- Image Dataset
+
+---
+
+# Dataset
+
+The model is trained using a dataset of handwriting samples from individuals with and without Dyslexia.
+
+The dataset contains handwriting images categorized into two classes:
+
+- Dyslexic handwriting
+- Non-Dyslexic handwriting
+
+These images allow the CNN model to learn patterns related to:
+
+- letter spacing
+- writing alignment
+- stroke patterns
+- irregular letter formation
+
+---
+
+# Example Dataset Format
 
 ```
-📸 Upload Handwriting Image
-        ↓
-🔍 Image Preprocessing (resize, normalize)
-        ↓
-🧠 CNN Model Inference
-        ↓
-📊 Prediction: Dyslexic / Non-Dyslexic
-        ↓
-🌐 Result Displayed on Web Interface
-```
-
-The model is trained on labeled handwriting samples, learning to identify spatial patterns, letter reversals, inconsistent spacing, and other visual signatures commonly associated with dyslexia.
-
----
-
-## 📁 Project Structure
-
-```
-NeuroSense/
+dataset
 │
-├── 📂 dataset/               # Raw dataset for training
-├── 📂 dyslexia_dataset/      # Processed dyslexia-specific samples
-├── 📂 static/                # CSS, JS, images for the web app
-├── 📂 templates/             # HTML templates (Jinja2 / Flask)
+├── dyslexic
+│   ├── img1.jpg
+│   ├── img2.jpg
 │
-├── 🐍 app.py                 # Flask web application entry point
-├── 🐍 train_model.py         # CNN model training script
-├── 📓 NeuroSense.ipynb       # Jupyter notebook — EDA & model training
-├── 📋 requirements.txt       # Python dependencies
-├── 🖼️ learnn.jpg             # Project visual / banner
-└── 📄 README.md              # You're reading it!
+├── non_dyslexic
+│   ├── img1.jpg
+│   ├── img2.jpg
 ```
+
+Each folder represents a classification category used during CNN model training.
 
 ---
 
-## 🚀 Getting Started
+# How to Run
 
-### Prerequisites
+## 1. Clone the Repository
 
-- Python 3.8 or higher
-- pip package manager
-- Git
-
-### Installation
-
-**1. Clone the repository**
-```bash
+```
 git clone https://github.com/Rithika48/NeuroSense.git
+```
+
+## 2. Navigate to the Project Folder
+
+```
 cd NeuroSense
 ```
 
-**2. Create a virtual environment** *(recommended)*
-```bash
-python -m venv venv
-source venv/bin/activate        # macOS/Linux
-venv\Scripts\activate           # Windows
-```
+## 3. Install Dependencies
 
-**3. Install dependencies**
-```bash
+```
 pip install -r requirements.txt
 ```
 
-**4. Train the model** *(skip if pre-trained model is included)*
-```bash
-python train_model.py
-```
+## 4. Run the Application
 
-**5. Launch the web app**
-```bash
+```
 python app.py
 ```
 
-**6. Open your browser and go to:**
+## 5. Open in Browser
+
 ```
 http://127.0.0.1:5000
 ```
 
----
-
-## 🧠 Model Architecture
-
-The CNN model is built to classify handwriting samples into:
-
-- ✅ **Non-Dyslexic** — Handwriting patterns within typical range
-- ⚠️ **Dyslexic Indicators** — Patterns suggesting early signs of dyslexia
-
-The model uses standard CNN layers (Conv2D → MaxPooling → Dropout → Dense) optimized for grayscale handwriting image classification. Full architecture details are available in [`NeuroSense.ipynb`](NeuroSense.ipynb).
+Upload a handwriting image to receive the prediction result.
 
 ---
 
-## 🛠️ Tech Stack
+# System Architecture
 
-| Layer | Technology |
-|---|---|
-| **Backend** | Python, Flask |
-| **Deep Learning** | TensorFlow / Keras |
-| **Frontend** | HTML5, CSS3 |
-| **Model Development** | Jupyter Notebook |
-| **Data Handling** | NumPy, OpenCV / Pillow |
+```
+User Uploads Handwriting Image
+        │
+        ▼
+Web Interface (HTML/CSS)
+        │
+        ▼
+Flask Web Application
+        │
+        ▼
+Image Preprocessing
+        │
+        ▼
+CNN Deep Learning Model
+        │
+        ▼
+Dyslexia / Non-Dyslexia Prediction
+```
 
----
-
-## 📸 Screenshots
-
-> *Upload your handwriting image → Get an instant AI-powered assessment*
-
-| Home Page | Upload & Predict | Result View |
-|---|---|---|
-| *(Screenshot)* | *(Screenshot)* | *(Screenshot)* |
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help improve NeuroSense:
-
-1. **Fork** the repository
-2. **Create** a feature branch: `git checkout -b feature/amazing-feature`
-3. **Commit** your changes: `git commit -m 'Add amazing feature'`
-4. **Push** to the branch: `git push origin feature/amazing-feature`
-5. **Open** a Pull Request
+The system processes uploaded images, prepares them for model input, and then feeds them into the trained CNN model to generate predictions.
 
 ---
 
-## ⚠️ Disclaimer
+# Project Structure
 
-> NeuroSense is an **educational and screening aid** — it is **not a medical diagnostic tool**. Results should not replace professional evaluation by a licensed educational psychologist, neurologist, or learning specialist. Always consult a qualified professional for a formal assessment.
+```
+NeuroSense
+│
+├── dyslexia_dataset
+│   ├── dyslexic
+│   ├── non_dyslexic
+│
+├── models
+│   └── dyslexia_model_best.h5
+│
+├── static
+│   └── uploads
+│
+├── templates
+│   └── index.html
+│
+├── NeuroSense.ipynb
+├── train_model.py
+├── app.py
+├── requirements.txt
+└── README.md
+```
 
 ---
 
-## 👩‍💻 Author
+# Deep Learning Model
 
-<div align="center">
+The handwriting classification model is built using a **Convolutional Neural Network (CNN)**.
 
-**Rithika**
-
-[![GitHub](https://img.shields.io/badge/GitHub-Rithika48-181717?style=for-the-badge&logo=github)](https://github.com/Rithika48)
-
-*"Building technology that understands how people learn differently."*
-
-</div>
+CNN models are highly effective for image-based pattern recognition tasks such as handwriting analysis.
 
 ---
 
-## 📄 License
+# Features Used by the Model
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+The CNN automatically learns visual features from handwriting images including:
+
+- Stroke curvature
+- Letter spacing
+- Alignment
+- Character irregularities
+- Writing patterns
 
 ---
 
-<div align="center">
+# Model Workflow
 
-Made with ❤️ and a belief that **every mind deserves to be understood**
+1️⃣ Data Collection  
+2️⃣ Image Preprocessing  
+3️⃣ Data Augmentation  
+4️⃣ CNN Model Training  
+5️⃣ Model Evaluation  
+6️⃣ Model Deployment using Flask
 
-⭐ Star this repo if NeuroSense inspired you!
+The trained model is saved as:
 
-</div>
+```
+dyslexia_model_best.h5
+```
+
+and loaded during application startup for prediction.
+
+---
+
+# Screenshots
+
+## Home Page
+
+The home page allows users to upload handwriting images for analysis.
+
+The interface provides a simple upload option and displays prediction results instantly.
+
+---
+
+## Prediction Result Page
+
+After uploading an image, the system processes the handwriting and displays whether the sample indicates **Dyslexia or Non-Dyslexia**.
+
+---
+
+# Future Improvements
+
+Possible future enhancements include:
+
+- Using larger handwriting datasets
+- Improving model accuracy with advanced CNN architectures
+- Implementing handwriting segmentation techniques
+- Deploying the application on cloud platforms
+- Building a mobile application version
+- Adding Explainable AI visualization for predictions
+
+---
+
+# Impact
+
+This project demonstrates how **Artificial Intelligence, Computer Vision, and Deep Learning** can be used to assist in the early detection of learning disabilities.
+
+By analyzing handwriting patterns through AI, the system provides a potential support tool for educators and parents to identify Dyslexia earlier and provide timely educational support.
