@@ -239,8 +239,8 @@ The home page allows users to upload handwriting images for analysis.
 The interface provides a simple upload option and displays prediction results instantly.
 
 <p align="center">
-  <img src="Home1(2).png" width="45%" />
-  <img src="Home2(2).png" width="45%" />
+  <img src="Screenshots/Home1(2).png" width="45%" />
+  <img src="Screenshots/Home2(2).png" width="45%" />
 </p>
 
 ---
