@@ -86,15 +86,17 @@ These images allow the CNN model to learn patterns related to:
 # Example Dataset Format
 
 ```
-dataset
+dyslexia_dataset/
 │
-├── dyslexic
-│   ├── img1.jpg
-│   ├── img2.jpg
+├── dyslexic/
+│   ├── 1.jpeg        ← incorrectly named "image1", actually belongs here
+│   ├── 2.jpeg
+│   └── ...
 │
-├── non_dyslexic
-│   ├── img1.jpg
-│   ├── img2.jpg
+└── non_dyslexic/
+    ├── 1.jpeg
+    ├── 2.jpeg
+    └── ...
 ```
 
 Each folder represents a classification category used during CNN model training.
